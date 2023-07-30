@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: url(../images/bg-mobile.png) no-repeat center fixed; 
+    /* background-size: cover; */
+}
+
+@media (min-width: 1115px){
+  body {
+    height: 800px;
+    background: url(../images/bg-desktop.png)  no-repeat;
+    background-color: var(--very-dark-blue);
+    background-position: bottom;
+}
+}
+
+
+
+:root{
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 290px 26px;
+   
+  }
+
+  @media (min-width: 1115px){
+    .flex-container {
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+   .logo{
+    padding: 35px 40px;
+   }
+
+
+  .container-1{
+    background-color: var(--dark-blue);
+    width: 325px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px 95px 10px 10px;
+  }
+
+  @media (min-width: 1115px){
+    .container-1 {
+      margin-right: 30px;
+      width: 350px;
+      
+  }
+}
+
+  .iconos{
+    width: 230px;
+    padding-left: 41px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .icono{
+    text-align: center;
+    padding-top: 13px;
+    background-color: var(--very-dark-blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .container-2{
+    background-color: var(--dark-blue);
+    width: 325px;
+    height: 160px;
+    border-radius: 10px;
+  }
+
+  @media (min-width: 1115px){
+    .container-2 {
+      width: 545px;
+  }
+}
+
+  .texto{
+    text-align: center;
+    margin-top: 37px;
+  }
+
+  @media (min-width: 1115px){
+    .texto{
+      text-align: left;
+      margin-left: 50px;
+    }
+
+  } 
+
+  .texto p{
+    color: var(--pale-blue);
+  }
+
+  .texto p span{
+    font-weight: 700;
+  }
+
+  .container-progress{
+    margin-top: 20px;
+    width: 305px;
+    padding-left: 18px;
+  }
+
+  @media (min-width: 1115px){
+    .container-progress{
+       width: 490px;
+       padding-left: 45px;
+    }
+  }
+
+  .progress2 {
+    padding: 3px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);
+    /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+      0 1px rgba(255, 255, 255, 0.08); */
+  }
+
+
+  .progress-bar2 {
+    padding: 0px;
+    height: 15px;
+    border-radius: 30px;
+    background-color: var(--dark-blue);
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+  }
+
+  .progress-moved .progress-bar2 {
+    width: 85%;
+    background: linear-gradient(90deg, rgba(250,161,147,1) 0%, rgba(254,80,151,1) 100%);
+    animation: progressAnimation 6s;
+  }
+
+  .ball{
+    background-color: white;
+    width: 14px;
+    height: 14px;
+    border-radius: 30px;
+    margin-left: 93%;
+    padding: 1px 0;
+}
+
+@media (min-width: 1115px){
+  
+  .ball{
+    margin-left: 96%;
+   }
+}
+  
+
+.numeros{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 13px;
+}
+
+.numeros p{
+  color: var(--pale-blue);
+  font-weight: 700;
+  font-size: small;
+}
+
+.cantidad{
+  position: relative;
+  display: flex;
+  background-color: white;
+  width: 180px;
+  height: 72px;
+  border-radius: 10px;
+  margin-left: 58px;
+  margin-top: 10px;
+}
+
+
+@media (min-width: 1115px){
+  .cantidad{
+    margin-left: 311px;
+    margin-top: -176px;
+    border-radius: 10px 10px 0px 10px;
+  }
+
+  .cantidad:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #ffff transparent transparent;
+    bottom: -20px;
+    left: 96%;
+    margin-left: -13px;
+  }
+}
+
+.p1{
+  text-align: center;
+  padding-left: 26px;
+  padding-top: 11px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.p2{
+  margin-left: 10px;
+  color: var(--grayish-blue);
+  font-size: small;
+  font-weight: 700;
+  padding-top: 29px;
+}
+
+  
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
